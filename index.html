@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dow Jones Strategy </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PIN Screen -->
+  <div id="pin-screen">
+    <h2 class="title">Enter PIN to Access</h2>
+    <input type="password" id="pin-input" placeholder="Enter PIN"/>
+    <button onclick="checkPin()">Submit</button>
+    <p id="error-msg" style="color: red; display: none;">Wrong PIN. Try again.</p>
+  </div>
+
+  <!-- Calculator (hidden by default) -->
+  <div id="calculator-container" style="display: none;" class="container">
+    <h1 class="title">Dow Jones Strategy </h1>
+    <input type="text" id="display" readonly />
+
+    <div class="buttons">
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="calculate()">=</button>
+    </div>
+
+    <div class="actions">
+      <button class="up-btn" onclick="calculateUp2()">Up </button>
+      <button class="down-btn" onclick="calculateDown2()">Down </button>
+      
+    </div>
+
+    <h3>History</h3>
+    <ul id="history-log" class="history-log"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
